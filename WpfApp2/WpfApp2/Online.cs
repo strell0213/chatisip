@@ -10,10 +10,12 @@ namespace WpfApp2
     {
         public int ID { get; set; }
         private string NickName;
+        public int IsBanned { get; set; }
         public string nickName { get { return NickName; } set { value = NickName; } }
         public Online() { }
-        public Online(string NickName) { 
+        public Online(string NickName, int IsBanned) { 
             this.NickName = NickName;
+            this.IsBanned = IsBanned;
         }
     }
 }

@@ -11,6 +11,7 @@ namespace WpfApp2
     {
         public DbSet<Message> Messages { get; set; }
         public DbSet<Online> Onlines { get; set; }
+        public DbSet<Admin> Admins { get; set; }
         public AC() : base("DefaultConnection") { }
     }
 }

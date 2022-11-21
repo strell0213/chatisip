@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" SizeToContent="Manual" WindowState="Normal" WindowStyle="None">
+        Title="MainWindow" Height="600" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" SizeToContent="Manual" WindowState="Normal" WindowStyle="None" Closing="Window_Closing" Closed="Window_Closed">
     <Grid>
         <Grid x:Name="NickNameGrid" Background="#FFECECEC" Visibility="Visible">
             <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="500" Height="400" Background="#FF5A7CB3">
@@ -24,6 +24,13 @@
             <ListBox x:Name="MessageList" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="550" Height="400" Margin="0,0,0,0" Background="#FFE2DFDF" Foreground="#FF0E0E0E" FontWeight="Bold" FontFamily="Century Gothic" FontSize="14"/>
             <TextBox x:Name="MessageText" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,500,150,0" Width="400" Height="30" FontWeight="Bold" FontFamily="Century Gothic" FontSize="14"></TextBox>
             <Button x:Name="SendButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="30" Margin="400,500,0,0" Content="Отправить" FontWeight="Bold" FontFamily="Century Gothic" FontSize="20" Background="#FFA7BCEF" Foreground="White" Click="SendButton_Click"></Button>
+            <Button x:Name="AdminPanelButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="30" Margin="25,70,0,0" Content="Админ панель" FontWeight="Bold" FontFamily="Century Gothic" FontSize="16" Background="#FFB35A5A" Foreground="White" Click="AdminPanelButton_Click"></Button>
+            <Grid x:Name="AdminGrid" Background="#FF6F3F3F" Width="200" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,100,0,0" Visibility="Hidden">
+                <Label Width="100" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,40,0,0" Content="Пароль" FontWeight="Bold" FontSize="18" Background="{x:Null}" Foreground="White"></Label>
+                <PasswordBox x:Name="PasswordText" Width="150" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" ></PasswordBox>
+                <Button x:Name="GoToAdminPanel" Margin="0,100,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="150" Content="Войти" FontWeight="Bold" FontSize="18" Background="#FFBF2525" Click="GoToAdminPanel_Click"></Button>
+            </Grid>
         </Grid>
+        
     </Grid>
 </Window>

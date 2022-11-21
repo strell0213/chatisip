@@ -10,5 +10,6 @@ namespace WpfApp2
     {
         public static int IsLogin;
         public static string LoginName;
+        public static string poslan;
     }
 }
